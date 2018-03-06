@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    position: relative;
+    @include if-desktop {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+.margen {
+    color: transparent;
+    background: transparent;
+    @include if-mobile {
+        min-height: 82px;
+    }@include if-mobile-landscape {
+        min-height: 82px;
+    }
+    @include if-tablet {
+        min-height: 93px;
+    }
+    @include if-tablet-landscape {
+        min-height: 88px;
+    }
+    @include if-desktop {
+        min-height: 92px;
+    }
+}

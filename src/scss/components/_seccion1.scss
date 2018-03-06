@@ -1,0 +1,175 @@
+.elementos {
+    .seccion1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        .resto {
+            padding-left: 25px;
+            padding-right: 25px;
+            @include if-mobile {
+                padding-left: 0px;
+                padding-right: 0px;
+
+            }
+            .poster:hover {
+                
+            box-shadow: 1px 1px 10px $rojizo;
+            }
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            .pelicula {
+                width: 48%;
+                padding-bottom: 15px;
+                .mas {
+                    width: 30%;
+                    margin: 0;
+                    text-align: center;
+                }
+                .datos {
+                    padding: 15px;
+                    @include if-mobile {
+                        width: 100%;
+                    }
+                    .titulo {
+                        letter-spacing: 3px;
+                        font-size: 50px;
+                        font-weight: bolder;
+                        h1 {
+                            font-size: 50px;
+                        }
+                    }
+                    .director {
+                        padding: 10px;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    .genero {
+                        padding: 10px;
+                        color: grey;
+                    }
+                    .fecha {
+                        padding: 10px;
+                        color: $carbon;
+                    }
+                }
+                .datosmas {
+                    margin: 15px;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: space-between;
+                }
+            }
+            @include if-mobile {
+                flex-flow: column nowrap;
+                .pelicula {
+                    .poster {
+                        width: 100%;
+                    }
+                    width: 100%;
+                }
+            }
+        }
+        .pelicula {
+            margin-bottom: 15px;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0), $blanco);
+            .slider2 {
+                width: 100%;
+                margin: auto;
+                overflow: hidden;
+                background: linear-gradient(transparent, $carbon);
+                @include if-mobile {
+                    margin-top: 20px;
+                    width: 100%;
+                }
+            }
+
+            .slider2 ul {
+                display: flex;
+                padding: 0;
+                width: 400%;
+                animation: cambio 20s infinite alternate linear; 
+            }
+            .slider2 li {
+                width: 100%;
+                list-style: none;
+            }
+            .slider2 img {
+                box-sizing: border-box;
+                border-radius: 2px;
+                width: 100%;
+            }
+            @keyframes cambio {
+                0% {
+                    margin-left: 0;
+                }
+                20% {
+                    margin-left: 0;
+                }
+                25% {
+                    margin-left: -100%;
+                }
+                45% {
+                    margin-left: -100%;
+                }
+                50% {
+                    margin-left: -200%;
+                }
+                70% {
+                    margin-left: -200%;
+                }
+                75% {
+                    margin-left: -300%;
+                }
+                100% {
+                    margin-left: -300%;
+                }
+            }
+            ul {
+                padding-top: 15px;
+                box-sizing: border-box;
+                list-style-type: none;
+            }
+            .mas {
+                width: 30%;
+                margin: 0;
+                text-align: center;
+            }
+            .datos {
+                padding: 15px;
+                @include if-mobile {
+                    width: 100%;
+                    padding: 0;
+                }
+                .titulo {
+                    letter-spacing: 3px;
+                    font-size: 50px;
+                    font-weight: bolder;
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
+                .director {
+                    padding: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .genero {
+                    padding: 10px;
+                    color: grey;
+                }
+                .fecha {
+                    padding: 10px;
+                    color: $carbon;
+                }
+            }
+            .datosmas {
+                margin: 15px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+            }
+        }
+    }
+}

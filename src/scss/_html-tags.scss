@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background: rgb(199, 23, 10);
+    font-family: $font-logo;
+}
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+a {
+    text-decoration: none;
+    color: $carbon;
+}
+a:focus {
+    text-decoration: none;
+    color: $rojizo;
+}
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+p {
+    font-size: 13px;
+}
+b {
+    font-weight: bold;
+}
+em{
+    font-style: italic;
+}

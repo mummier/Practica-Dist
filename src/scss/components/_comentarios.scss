@@ -1,0 +1,85 @@
+.comentarios {
+    display: flex;
+    flex-flow: column nowrap;
+    background: $blanco;
+    margin: auto;
+    padding: 0px;
+    .not {
+        color: grey;
+        padding: 20px;
+        margin-left: 30px;
+    }
+    @include if-desktop {
+        width: 1024px;
+    }
+    h1 {
+        padding: 20px 50px 20px 50px;
+        font-size: 20px;
+        @include if-mobile {
+            padding: 50px 0 10px 20px;
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 2px rgba(71, 61, 139, 0.274);
+        background: linear-gradient( rgba(255, 255, 255, 0), fade-out($carbon, 0.9));
+        border-radius: 2px;
+        width: 100%;
+        @include if-desktop {
+
+            padding-left: 45px;
+        }
+        textarea {
+            width: 60%;
+            @include if-mobile {
+                width: 99%;
+                margin: 1px;
+                padding: 0;
+            }
+            @include if-mobile-landscape {
+                width: 99%;
+                margin: 2px;
+                padding: 0;
+            }
+            @include if-desktop {
+                width: 60%;
+                margin: 2px;
+            }
+        }
+        h1 {
+            padding: 20px 0 20px 50px;
+            font-size: 14px;
+            @include if-mobile {
+                padding: 20px 0 10px 20px;
+            }
+            @include if-desktop {
+                padding: 20px 0 20px 00px;
+
+            }
+        }
+        #boton {
+            width: 80px;
+            box-sizing: border-box;
+            border: 2px solid $gris;
+            margin: 0px 0px 65px 50px;
+            padding: 2px;
+            border-radius: 2px;
+            background: $blanco;
+            color: $carbon;
+        }
+        #boton:hover {
+            box-sizing: border-box;
+            border: 2px solid $blanco;
+            background: fade-out($blanco, 0.2);
+            color: $carbon;
+        }
+        #boton:focus {
+            box-sizing: border-box;
+            border: 2px solid $gris;
+            background: rgb(211, 140, 140);
+            color: $blanco;
+        }
+    }
+}

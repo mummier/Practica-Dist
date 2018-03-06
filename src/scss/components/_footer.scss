@@ -1,0 +1,113 @@
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background: #202020;
+    margin-top: 100px;
+    overflow: hidden;
+    color: red;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 2s;
+    font-size: 15px;
+    font-size: 10px;
+    @include if-mobile {
+        font-size: 8px;
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        margin-top: 7px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $blanco, rgba(0, 0, 0, 0));
+    }
+    .info1 {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        flex-flow: column nowrap;
+        padding: 0px;
+    }
+    .inff {
+        color: rgb(173, 173, 173);
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-flow: nowrap;
+        @include if-mobile {
+            flex-direction: column;
+            width: 100%;
+        }
+        @include if-mobile-landscape {
+            width: 100%;
+        }
+
+        @include if-desktop {
+            width: 60%;
+        }
+        .info {
+            flex: 3;
+            padding: 15px;
+            text-align: justify;
+            text-justify: stretch;
+            
+        }
+        .info2 {
+            flex: 8;
+            padding: 15px;
+            text-align: justify;
+            text-justify: stretch;
+        }
+    }
+    .titulo {
+        margin-bottom: 10px;
+        margin: auto;
+        .web-title {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+    }
+    .rrss {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 15px;
+        margin-left: 0;
+        justify-content: center;
+        @include if-desktop {
+            display: flex;
+            flex-flow: column nowrap;
+            margin-top: 0;
+            margin-left: 25px;
+            justify-content: flex-end;
+        }
+        @include if-mobile-landscape {
+            display: flex;
+            flex-flow: column nowrap;
+            margin-top: 0;
+            margin-left: 25px;
+            justify-content: flex-end;
+        }
+        img {
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            @include if-mobile-landscape {
+                width: 25px;
+                height: 25px;
+            }
+            &:hover {
+                a {
+                    padding: 0px;
+                }
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
