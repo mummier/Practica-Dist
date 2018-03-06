@@ -7,7 +7,7 @@ nav {
   justify-content: space-between;
   background-color: #333;
   width: 100%;
-  height: 5%;
+  min-height: 4%;
   z-index: 999;
   font-family: $font-logo;
   ul {
@@ -130,6 +130,12 @@ nav {
   li p:hover,
   .dropdown:hover .dropbtn {
     color: red;
+  }
+  @include if-desktop {
+    li p:focus,
+    .dropdown:hover .dropbtn {
+      color: red;
+    }
   }
   @include if-mobile {
     li p:focus,
